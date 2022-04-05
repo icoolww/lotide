@@ -1,13 +1,13 @@
 // FUNCTION IMPLEMENTATION
 const assertEqual = function(actual, expected) {
-  if (actual !== expected){
+  if (actual !== expected) {
     console.log("🔴🔴🔴 Assertion Failed");
   } else {
     console.log("🟩🟩🟩 Assertion Passed");
   }
 };
 
-const head = function(arr){
+const head = function(arr) {
   return arr[0];
 };
 
