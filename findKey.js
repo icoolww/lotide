@@ -12,9 +12,9 @@ const findKey = function (object, callback) {
   for (let a of Object.keys(object)) { // iterate through the value
 
     //  console.log(callback(object[a]));
-    if (callback(object[a])) {
+    if (callback(object[a])) { // check the condition, truthy
       output += a;
-      break;
+      break; // stop the loop if the condition is true
     }
   }
   console.log(output);
