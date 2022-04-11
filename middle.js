@@ -1,29 +1,32 @@
 
 
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log("🟩🟩🟩 Assertion Passed");
-  } else {
-    console.log("🔴🔴🔴 Assertion Failed");
-  }
-};
+// const assertArraysEqual = function(actual, expected) {
+//   if (eqArrays(actual, expected)) {
+//     console.log("🟩🟩🟩 Assertion Passed");
+//   } else {
+//     console.log("🔴🔴🔴 Assertion Failed");
+//   }
+// };
 
 
-const eqArrays = function(actual, expected){
-  if (actual.length !== expected.length) {
-    return false;
-  }
-  for (let i = 0; i < actual.length; i++) {
-    if (actual[i] !== expected[i] ) {
-      return false;
-    } 
-  }
-  return true;
-};
+// const eqArrays = function(actual, expected){
+//   if (actual.length !== expected.length) {
+//     return false;
+//   }
+//   for (let i = 0; i < actual.length; i++) {
+//     if (actual[i] !== expected[i] ) {
+//       return false;
+//     } 
+//   }
+//   return true;
+// };
 
 // if input array less than 2, output = empty array
 // if odd, output = middle, divided by 2, math.floor
 // if even, output = middle of 2, - 1
+
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
 
 const middle = function (array) {
   let output = [];
@@ -46,13 +49,15 @@ const middle = function (array) {
   return output;
   };
 
+  module.exports = middle;
 
-//  // Test Code
-assertArraysEqual(middle([1]), []) // => []
-assertArraysEqual(middle([1, 2]), []) // => []
 
-assertArraysEqual(middle([1, 2, 3]), [2]) // => [2]
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]) // => [3]
+// //  // Test Code
+// assertArraysEqual(middle([1]), []) // => []
+// assertArraysEqual(middle([1, 2]), []) // => []
 
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]) // => [2, 3]
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]) // => [3, 4]
+// assertArraysEqual(middle([1, 2, 3]), [2]) // => [2]
+// assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]) // => [3]
+
+// assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]) // => [2, 3]
+// assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]) // => [3, 4]
