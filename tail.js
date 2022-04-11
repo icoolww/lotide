@@ -14,9 +14,9 @@ const tail = function(arr) {
   return arr;
 };
 
-// TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
+// // TEST CODE
+// assertEqual("Lighthouse Labs", "Bootcamp");
+// assertEqual(1, 1);
 
 // [1, 2, 3] === [1, 2, 3] // => false
 // [1, 2, 3] == [1, 2, 3] // => false
