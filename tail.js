@@ -14,6 +14,8 @@ const tail = function(arr) {
   return arr;
 };
 
+module.exports = tail;
+
 // // TEST CODE
 // assertEqual("Lighthouse Labs", "Bootcamp");
 // assertEqual(1, 1);
