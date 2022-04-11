@@ -1,22 +1,25 @@
-const eqArrays = function(actual, expected){
-  if (actual.length !== expected.length) {
-    return false;
-  }
-  for (let i = 0; i < actual.length; i++) {
-    if (actual[i] !== expected[i] ) {
-      return false;
-    } 
-  }
-  return true;
-};
+// const eqArrays = function(actual, expected){
+//   if (actual.length !== expected.length) {
+//     return false;
+//   }
+//   for (let i = 0; i < actual.length; i++) {
+//     if (actual[i] !== expected[i] ) {
+//       return false;
+//     } 
+//   }
+//   return true;
+// };
 
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log("🟩🟩🟩 Assertion Passed");
-  } else {
-    console.log("🔴🔴🔴 Assertion Failed");
-  }
-};
+// const assertArraysEqual = function(actual, expected) {
+//   if (eqArrays(actual, expected)) {
+//     console.log("🟩🟩🟩 Assertion Passed");
+//   } else {
+//     console.log("🔴🔴🔴 Assertion Failed");
+//   }
+// };
+
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEquals');
 
 
 const without = function (actual, expected) {
@@ -39,6 +42,8 @@ const without = function (actual, expected) {
   return result;
 }
 
+
+module.exports = without;
 
 
 // [1,2,3].includes(1)

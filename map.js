@@ -1,24 +1,24 @@
 // const words = ["ground", "control", "to", "major", "tom"];
 
-const eqArrays = function(actual, expected){
-  if (actual.length !== expected.length) {
-    return false;
-  }
-  for (let i = 0; i < actual.length; i++) {
-    if (actual[i] !== expected[i] ) {
-      return false;
-    } 
-  }
-  return true;
-}
+// const eqArrays = function(actual, expected){
+//   if (actual.length !== expected.length) {
+//     return false;
+//   }
+//   for (let i = 0; i < actual.length; i++) {
+//     if (actual[i] !== expected[i] ) {
+//       return false;
+//     } 
+//   }
+//   return true;
+// }
 
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log("🟩🟩🟩 Assertion Passed");
-  } else {
-    console.log("🔴🔴🔴 Assertion Failed");
-  }
-};
+// const assertArraysEqual = function(actual, expected) {
+//   if (eqArrays(actual, expected)) {
+//     console.log("🟩🟩🟩 Assertion Passed");
+//   } else {
+//     console.log("🔴🔴🔴 Assertion Failed");
+//   }
+// };
 
 // const map = function(array, callback) {
 //   // temporary code:
@@ -28,6 +28,10 @@ const assertArraysEqual = function(actual, expected) {
 //   const results = [];
 //   return results;
 // }
+
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEquals');
+
 
 const map = function(array, callback) {
   const results = [];
@@ -40,6 +44,7 @@ const map = function(array, callback) {
   return results;
 }
 
+module.exports = map;
 
 // const results1 = map(words, word => word[0]);
 // console.log(results1);

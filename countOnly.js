@@ -39,6 +39,7 @@ if (itemsToCount[item]) {
 return results;
 };
 
+module.exports = countOnly;
 
 const firstNames = [
   "Karl",
