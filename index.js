@@ -30,7 +30,7 @@ module.exports = {
   middle,
   assertArraysEqual,
   assertEqual,
-  eqArrays
+  eqArrays,
   
 };
 
